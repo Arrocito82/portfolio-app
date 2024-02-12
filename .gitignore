@@ -1,4 +1,4 @@
 .env
 .git
 .dockerignore
-./dhparam/dhparam-2048.pem
+dhparam/*.pem
