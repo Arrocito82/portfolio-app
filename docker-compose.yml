@@ -10,7 +10,10 @@ services:
     restart: unless-stopped
     networks:
       - app-network
-
+    environment:
+      - DATABASE_URL=$DATABASE_URL
+      - CLIENT_ORIGIN=$CLIENT_ORIGIN
+      - API_LOCAL_PORT=$API_LOCAL_PORT
   webserver:
     image: nginx:mainline-alpine
     container_name: webserver
