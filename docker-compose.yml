@@ -1,0 +1,102 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    depends_on:
+      - nodejs
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --staging -d $DOMINIO -d www.$DOMINIO 
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+
+networks:
+  app-network:
+    driver: bridge
+# version: '3'
+
+# services:
+#   postgres:
+#     image: postgres:latest
+#     restart: unless-stopped
+#     env_file: .env
+#     environment:
+#       - POSTGRES_PASSWORD= $POSTGRES_PASSWORD
+#       - POSTGRES_USER= $POSTGRES_USER
+#       - POSTGRES_DB= $POSTGRES_DB
+#     ports:
+#       - $POSTGRES_LOCAL_PORT:$POSTGRES_DOCKER_PORT
+#     volumes:
+#       - postgres-data:/var/lib/postgresql/data
+
+#   webserver:
+#     depends_on:
+#       - wordpress
+#     image: nginx:1.15.12-alpine
+#     container_name: webserver
+#     restart: unless-stopped
+#     ports:
+#       - "80:80"
+#       - "443:443"
+#     volumes:
+#       - ./data/wordpress:/var/www/html
+#       - ./nginx-conf:/etc/nginx/conf.d
+#       - certbot-etc:/etc/letsencrypt
+
+#   api:
+#     depends_on:
+#       - postgres
+#     env_file: .env
+#     ports:
+#       - $API_LOCAL_PORT:$API_DOCKER_PORT
+#     environment:
+#       - DATABASE_URL=$DATABASE_URL
+#       - CLIENT_ORIGIN=$CLIENT_ORIGIN
+#       - API_LOCAL_PORT=$API_LOCAL_PORT
+
+#   certbot:
+#     depends_on:
+#       - webserver
+#     image: certbot/certbot
+#     container_name: certbot
+#     volumes:
+#       - certbot-etc:/etc/letsencrypt
+#       - ./data/wordpress:/var/www/html
+#     command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --staging -d $DOMINIO -d $WWW_DOMINIO
+#     #command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --force-renewal -d $DOMINIO -d $WWW_DOMINIO
+# volumes:
+#   certbot-etc:
+#   postgres-data:

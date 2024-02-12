@@ -1,0 +1,165 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Jobs",
+    "dateExported": "2024-01-23T18:34:51.850Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0c1cf7ea-a9fe-4920-9e8e-bbaf69eacbba",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Create Job",
+            "url": "http://localhost:3000/jobs",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-23T17:25:35.046Z",
+            "modified": "2024-01-23T17:53:38.329Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":6,\n  \"name\":\"QA Analyst Junior\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "57bc1d6f-c0d8-47de-a825-5372c6ca45e3",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Create Job: duplicate id",
+            "url": "http://localhost:3000/jobs",
+            "method": "POST",
+            "sortNum": 12500,
+            "created": "2024-01-23T17:50:03.129Z",
+            "modified": "2024-01-23T17:50:03.129Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":5,\n  \"name\":\"QA Analyst\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b1973890-9a44-4afc-8aed-0c9a051a4a50",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Create Job: No id, no name Copy",
+            "url": "http://localhost:3000/jobs",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-01-23T17:50:22.832Z",
+            "modified": "2024-01-23T17:50:53.927Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6350b012-658f-4544-b814-061402218e81",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Create Job: No id",
+            "url": "http://localhost:3000/jobs",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-01-23T17:49:34.486Z",
+            "modified": "2024-01-23T17:51:07.173Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"QA Analyst\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ad77954e-7891-4055-822f-6dbb6d0f47b4",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Create Job: no name",
+            "url": "http://localhost:3000/jobs",
+            "method": "POST",
+            "sortNum": 17500,
+            "created": "2024-01-23T17:49:36.933Z",
+            "modified": "2024-01-23T17:51:13.094Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d6120b16-9e13-48ab-bb0b-308ce662ae59",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Get Jobs",
+            "url": "http://localhost:3000/jobs",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-23T17:25:43.212Z",
+            "modified": "2024-01-23T17:26:06.330Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0e73ef9c-ac1f-48fa-99f4-0465486f57cc",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Get Jobs: Not found",
+            "url": "http://localhost:3000/jobs/15",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-23T18:07:25.574Z",
+            "modified": "2024-01-23T18:07:47.068Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "38ef1833-0cb1-4ae6-9094-69e05912d6e9",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Get Jobs: Update",
+            "url": "http://localhost:3000/jobs/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-01-23T18:08:20.539Z",
+            "modified": "2024-01-23T18:13:55.627Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Content Creator\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "536076de-f6be-465c-943b-eaa6232813ea",
+            "colId": "2402eef3-a657-4bd9-8b27-c637bc11e2a5",
+            "containerId": "",
+            "name": "Delete Jobs",
+            "url": "http://localhost:3000/jobs/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-01-23T18:17:23.658Z",
+            "modified": "2024-01-23T18:17:46.457Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

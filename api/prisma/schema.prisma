@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Job {
+  id        Int     @id
+  name     String
+  departments HiredEmployee[]
+}
+model Department {
+  id        Int     @id
+  name     String
+  jobs HiredEmployee[]
+}
+model HiredEmployee {
+  id        Int     @id
+  name     String
+  hire      DateTime
+  department    Department?   @relation(fields: [departmentId], references: [id])
+  departmentId  Int?
+  job    Job?   @relation(fields: [jobId], references: [id])
+  jobId  Int?
+}

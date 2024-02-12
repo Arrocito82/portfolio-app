@@ -1,0 +1,130 @@
+{
+    "data": [
+        {
+            "id": 5,
+            "name": "Adrian Castañeda",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 9,
+            "jobId": 3
+        },
+        {
+            "id": 2,
+            "name": "Erick Castro",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 7,
+            "jobId": 5
+        },
+        {
+            "id": 3,
+            "name": "Juan Montes",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 4,
+            "name": "Esteban Andrade",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 2
+        },
+        {
+            "id": 6,
+            "name": "Juan Pérez",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 7,
+            "name": "Adrian Castro",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 10,
+            "name": "Adrian Gonzales",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 11,
+            "name": "Juan Antonio",
+            "hire": "2021-01-27T16:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 2
+        },
+        {
+            "id": 12,
+            "name": "Ramón Santiago",
+            "hire": "2021-02-27T16:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 2
+        },
+        {
+            "id": 13,
+            "name": "Esteban Andrade",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 2
+        },
+        {
+            "id": 14,
+            "name": "Esteban Andrade",
+            "hire": "2020-01-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 2
+        },
+        {
+            "id": 15,
+            "name": "Esteban Andrade",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 16,
+            "name": "Alejandro Quintanilla",
+            "hire": "2021-02-27T16:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 4
+        },
+        {
+            "id": 17,
+            "name": "Estebano Angeles",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 2
+        },
+        {
+            "id": 18,
+            "name": "Alejandra Ortega",
+            "hire": "2021-02-27T16:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 6
+        },
+        {
+            "id": 19,
+            "name": "Santiago Ortiz",
+            "hire": "2021-02-27T16:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 7
+        },
+        {
+            "id": 20,
+            "name": "Ramón Alvarado",
+            "hire": "2021-07-27T16:02:08.000Z",
+            "departmentId": 1,
+            "jobId": 1
+        },
+        {
+            "id": 21,
+            "name": "Sandra Santos",
+            "hire": "2021-05-27T10:02:08.000Z",
+            "departmentId": 2,
+            "jobId": 9
+        }
+    ]
+}

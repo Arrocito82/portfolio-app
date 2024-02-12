@@ -1,0 +1,250 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "HiredEmployees",
+    "dateExported": "2024-01-24T04:16:31.581Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "238f0af8-3c2f-4319-baee-2952278cd865",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create HiredEmployee",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-24T00:07:48.284Z",
+            "modified": "2024-01-24T03:03:59.802Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": 14,\n      \"name\": \"Esteban Andrade\",\n      \"hire\": \"2021-07-27T16:02:08Z\",\n      \"departmentId\": 1,\n      \"jobId\": 2\n    }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "96ef59ca-2ff9-4636-996a-0a264738d71e",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create HiredEmployee: duplicate id",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "POST",
+            "sortNum": 12500,
+            "created": "2024-01-24T00:07:48.288Z",
+            "modified": "2024-01-24T02:05:39.494Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":10,\n  \"name\":\"Adrian Gonzales\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "433838c9-b059-4e0b-8e03-b20799943d76",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create HiredEmployee: No id, no name Copy",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-01-24T00:07:48.289Z",
+            "modified": "2024-01-24T00:07:48.289Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f06750b4-5c98-477b-81b1-9a95d3e32c15",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create HiredEmployee: No id",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-01-24T00:07:48.286Z",
+            "modified": "2024-01-24T00:48:13.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Adrian Castro\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f7a6994e-2e0d-4806-9b85-ce63fcf57673",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create HiredEmployee: no name",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "POST",
+            "sortNum": 17500,
+            "created": "2024-01-24T00:07:48.287Z",
+            "modified": "2024-01-24T00:48:27.995Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":3,\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "40ce8f79-882b-4e78-90f0-7b6c11830043",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Create Many HiredEmployees ",
+            "url": "http://localhost:3000/api/hiredEmployees/collection",
+            "method": "POST",
+            "sortNum": 18750,
+            "created": "2024-01-24T00:07:48.293Z",
+            "modified": "2024-01-24T03:49:14.392Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "[{\n  \"id\":13,\n  \"name\":\"Juan Montes\",\n  \"hire\":\"27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":1\n},\n{\n  \"id\":17,\n  \"name\":\"Estebano Angeles\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":2\n},\n{\n  \"id\":10,\n  \"name\":\"Steven Alvarez\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":5\n}\n]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0f86a67c-1a53-47a7-8afa-a5c04d7f10d5",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Validate Many HiredEmployees: Invalid data",
+            "url": "http://localhost:3000/api/hiredEmployees/collection/validate",
+            "method": "POST",
+            "sortNum": 19375,
+            "created": "2024-01-24T02:23:58.233Z",
+            "modified": "2024-01-24T03:48:42.242Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "[{\n  \"id\":13,\n  \"name\":\"Juan Montes\",\n  \"hire\":\"27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":1\n},\n{\n  \"id\":17,\n  \"name\":\"Estebano Angeles\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":2\n},\n{\n  \"id\":10,\n  \"name\":\"Steven Alvarez\",\n  \"hire\":\"2021-07-27T16:02:08Z\",\n  \"departmentId\":1,\n  \"jobId\":5\n}\n]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7acc5bf1-a4ce-435d-bcad-9cfe08f477dc",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Get HiredEmployees",
+            "url": "http://localhost:3000/api/hiredEmployees",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-24T00:07:48.285Z",
+            "modified": "2024-01-24T00:07:48.285Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a262143e-a234-4b55-9a62-c88b725f07ec",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Get HiredEmployee",
+            "url": "http://localhost:3000/api/hiredEmployees/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-24T00:07:48.290Z",
+            "modified": "2024-01-24T01:09:03.023Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "05cefb0a-e869-4b86-a0b4-b79119d69357",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Get HiredEmployees: Not found Copy",
+            "url": "http://localhost:3000/api/hiredEmployees/15",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2024-01-24T00:07:48.294Z",
+            "modified": "2024-01-24T00:07:48.294Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "63987ec4-7902-411a-a634-b4e58de2aa88",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Get HiredEmployees: Update",
+            "url": "http://localhost:3000/api/hiredEmployees/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-01-24T00:07:48.291Z",
+            "modified": "2024-01-24T01:20:32.719Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Adrian Castañeda\",\n  \"jobId\":5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1dfce1b-8dd0-4d30-91c7-db05373ac1a2",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Get HiredEmployees: Update, Not found",
+            "url": "http://localhost:3000/api/hiredEmployees/15",
+            "method": "PUT",
+            "sortNum": 45000,
+            "created": "2024-01-24T00:07:48.295Z",
+            "modified": "2024-01-24T01:20:44.445Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Adrian Castañeda\",\n  \"jobId\":5\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "794e13f7-4904-4aec-ab59-f3015c251f69",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Delete HiredEmployees",
+            "url": "http://localhost:3000/api/hiredEmployees/14",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-01-24T00:07:48.292Z",
+            "modified": "2024-01-24T03:04:25.181Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e0a3acad-6c3b-4559-a12b-727c63a96ea3",
+            "colId": "6b23ffe4-4e62-4146-bf51-3e3871b47db3",
+            "containerId": "",
+            "name": "Delete HiredEmployees, Not found",
+            "url": "http://localhost:3000/api/hiredEmployees/1",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-01-24T00:07:48.296Z",
+            "modified": "2024-01-24T01:21:42.364Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

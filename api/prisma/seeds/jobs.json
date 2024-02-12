@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "QA Analyst Mid-Senior"
+        },
+        {
+            "id": 2,
+            "name": "Backend Developer"
+        },
+        {
+            "id": 3,
+            "name": "Mobile Developer"
+        },
+        {
+            "id": 4,
+            "name": "Full Stack Developer"
+        },
+        {
+            "id": 5,
+            "name": "QA Analyst"
+        },
+        {
+            "id": 6,
+            "name": "QA Analyst Junior"
+        },
+        {
+            "id": 7,
+            "name": "CiberSecurity Expert"
+        },
+        {
+            "id": 8,
+            "name": "UI Designer"
+        },
+        {
+            "id": 9,
+            "name": "QA Analyst Senior"
+        },
+        {
+            "id": 15,
+            "name": "AI Engineer"
+        }
+    ]
+}

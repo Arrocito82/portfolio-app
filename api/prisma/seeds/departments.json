@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Departamento de TI"
+        },
+        {
+            "id": 2,
+            "name": "Departamento de Ventas"
+        },
+        {
+            "id": 3,
+            "name": "Departamento de Mercadeo"
+        },
+        {
+            "id": 7,
+            "name": "Recursos Humanos"
+        },
+        {
+            "id": 8,
+            "name": "Aseguramiento de la calidad"
+        },
+        {
+            "id": 9,
+            "name": "Contabilidad"
+        }
+    ]
+}

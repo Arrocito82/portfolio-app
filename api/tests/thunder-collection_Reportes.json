@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Reportes",
+    "dateExported": "2024-01-24T06:57:58.373Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cbda0c16-f429-4434-a20d-ac2b266f1730",
+            "colId": "d0131091-0d07-4ee4-a20d-82a9d7124736",
+            "containerId": "",
+            "name": "HiredEmployees Per Department For Each Quater Per Year",
+            "url": "http://localhost:3000/api/hiredEmployees/2021/reporte1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-24T06:56:56.584Z",
+            "modified": "2024-01-24T06:57:18.816Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

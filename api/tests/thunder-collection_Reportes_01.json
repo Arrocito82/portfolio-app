@@ -1,0 +1,37 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Reportes",
+    "dateExported": "2024-01-25T01:28:51.492Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "177a51fc-7c72-4e44-8b12-13fa616c3a3d",
+            "colId": "dbedcc21-6d80-4ae9-9e32-073f74db38bc",
+            "containerId": "",
+            "name": "HiredEmployees Per Department For Each Quater Per Year",
+            "url": "http://localhost:3000/api/hiredEmployees/2021/reporte1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-25T00:05:02.596Z",
+            "modified": "2024-01-25T00:05:02.596Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "05d31a8f-53f9-4ef1-9c7c-878e125756c5",
+            "colId": "dbedcc21-6d80-4ae9-9e32-073f74db38bc",
+            "containerId": "",
+            "name": "HiredEmployees Per Department Above Average",
+            "url": "http://localhost:3000/api/hiredEmployees/2021/reporte2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-25T00:05:09.372Z",
+            "modified": "2024-01-25T00:05:28.260Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
