@@ -14,6 +14,22 @@ services:
       - DATABASE_URL=$DATABASE_URL
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
       - API_LOCAL_PORT=$API_LOCAL_PORT
+  db:
+    image: postgres:latest
+    container_name: db
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - app-network
+    environment:
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+    ports:
+      - $POSTGRES_LOCAL_PORT:$POSTGRES_DOCKER_PORT
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
   webserver:
     image: nginx:mainline-alpine
     container_name: webserver
@@ -47,6 +63,7 @@ volumes:
   certbot-etc:
   certbot-var:
   web-root:
+  postgres-data:
   dhparam:
     driver: local
     driver_opts:

@@ -14,7 +14,7 @@ COPY --chown=node:node . .
 
 RUN npx prisma generate 
 
-# RUN npx prisma migrate reset --force
+RUN npx prisma migrate reset --force
 
 EXPOSE 8080
 
