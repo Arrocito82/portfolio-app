@@ -86,7 +86,6 @@ const getDepartmentByID = async (req, res) => {
   try {
     const department = await prisma.department.findUnique({
       where: { id: parseInt(id) },
-      include: { departments: true },
     });
     if(!department) {
       throw new Error(`ID ${id} not found`);
