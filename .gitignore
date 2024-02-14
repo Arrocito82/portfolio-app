@@ -2,3 +2,4 @@
 .git
 .dockerignore
 dhparam/*.pem
+sistema_clinico_medico/
