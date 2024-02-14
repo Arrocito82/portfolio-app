@@ -15,22 +15,36 @@ services:
       - db
     environment:
       - POSTGRES_DB=sistema-clinico-medico
-  nodejs:
+  hrm-api:
     build:
-      context: ./api
+      context: ./datalysis-group/api
       dockerfile: Dockerfile
-    image: nodejs
-    container_name: nodejs
+    image: hrm-api
+    container_name: hrm-api
     restart: unless-stopped
     networks:
       - app-network
+    env_file: .env
     environment:
       - DATABASE_URL=$DATABASE_URL
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
       - API_LOCAL_PORT=$API_LOCAL_PORT
     depends_on:
       - db
-
+  hrm:
+    build:
+      context: ./datalysis-group/app
+      dockerfile: Dockerfile
+    image: hrm
+    container_name: hrm
+    restart: unless-stopped
+    networks:
+      - app-network
+    env_file: .env
+    environment:
+      - REACT_APP_API_URL=$REACT_APP_API_URL
+    depends_on:
+      - hrm-api
   db:
     image: postgres:latest
     container_name: db
@@ -46,6 +60,20 @@ services:
       - $POSTGRES_LOCAL_PORT:$POSTGRES_DOCKER_PORT
     volumes:
       - postgres-data:/var/lib/postgresql/data
+  mongo:
+    image: mongo:5.0-focal
+    container_name: mongo
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - app-network
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
+    ports:
+      - "27017:27017"
+    volumes: 
+      - mongo-data:/data/db
 
   webserver:
     image: nginx:mainline-alpine
@@ -61,7 +89,7 @@ services:
       - certbot-var:/var/lib/letsencrypt
       - dhparam:/etc/ssl/certs
     depends_on:
-      - nodejs
+      - hrm-api
     networks:
       - app-network
 
@@ -74,20 +102,21 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --force-renewal -d $DOMINIO  -d www.$DOMINIO 
+    command: certonly --webroot --webroot-path=/var/www/html --email $EMAIL --agree-tos --no-eff-email --staging -d $DOMINIO  -d www.$DOMINIO -d hrm.$DOMINIO -d hrm-api.$DOMINIO -d sistema-clinico-medico.$DOMINIO
 
 volumes:
   certbot-etc:
   certbot-var:
   web-root:
   postgres-data:
+  mongo-data:
   dhparam:
     driver: local
     driver_opts:
       type: none
       device: ./dhparam/
       o: bind
-
+  
 networks:
   app-network:
     driver: bridge

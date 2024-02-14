@@ -3,3 +3,5 @@
 .dockerignore
 dhparam/*.pem
 sistema_clinico_medico/
+to-do-list-api/
+datalysis-group/
